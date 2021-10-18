@@ -1,6 +1,12 @@
 package com.springtask.api.controller.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Students {
+	
+	@Id
 	private long id;
 	private String name;
 	private long standard;

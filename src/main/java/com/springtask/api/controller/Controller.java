@@ -26,12 +26,15 @@ public class Controller {
 		return studentService.getStudents();
 	}
 	
+	//search student by id
 	@GetMapping("/students/{studentid}")
 	public Students getStudent(@PathVariable String studentid)
 	{
 		return this.studentService.getStudent(Long.parseLong(studentid));
 		//return (Students) studentService.getStudents();
 	}
+	
+	//add a student
 	@PostMapping(path="/students",consumes = "application/json")
 	public Students addStudent(@RequestBody Students students)
 	{
